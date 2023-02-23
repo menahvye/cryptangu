@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { CryptoComponent } from './crypto/crypto.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'test', component: CryptoComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
