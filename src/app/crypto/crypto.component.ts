@@ -16,7 +16,7 @@ export class CryptoComponent {
       (cryptos) => {
         this.cryptos = Object.values(cryptos);
         console.log(this.cryptos);
-        //this.cryptos = this.cryptos.slice(0, 50);
+        //this.cryptos = this.cryptos.slice(0, 50); (LIMITE)
       },
       (error) => {
         console.log(error);
