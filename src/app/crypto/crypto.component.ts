@@ -14,8 +14,9 @@ export class CryptoComponent {
   ngOnInit() {
     this.cryptoService.getCryptos().subscribe(
       (cryptos) => {
-        this.cryptos = cryptos;
-        this.cryptos = this.cryptos.slice(0, 50);
+        this.cryptos = Object.values(cryptos);
+        console.log(this.cryptos);
+        //this.cryptos = this.cryptos.slice(0, 50);
       },
       (error) => {
         console.log(error);

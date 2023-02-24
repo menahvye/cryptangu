@@ -1,14 +1,12 @@
 export class Crypto {
-    id: string | undefined;
+    id: number | undefined;
     name: string | undefined;
     symbol: string | undefined;
-    type: string | undefined;
 
   constructor() {
-    this.id = '';
-    this.name ='';
+    this.id = 0;
+    this.name = '';
     this.symbol = '';
-    this.type = '';
   }
 
 
