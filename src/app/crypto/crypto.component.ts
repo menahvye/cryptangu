@@ -19,7 +19,6 @@ export class CryptoComponent {
     this.cryptoService.getCryptos().subscribe(
       (response: any) => {
         this.cryptos = response.data;
-        console.log(this.cryptos);
         //this.cryptos = this.cryptos.slice(0, 50); (LIMITE)
       },
       (error) => {
