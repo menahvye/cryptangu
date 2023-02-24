@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { CryptoComponent } from './crypto/crypto.component';
 
 import { HttpClientModule } from '@angular/common/http';
+// MATERIAL
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+ import {MatTableModule} from '@angular/material/table';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
