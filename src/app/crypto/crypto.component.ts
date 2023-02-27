@@ -7,9 +7,7 @@ import { Crypto } from '../modeles/crypto';
   styleUrls: ['./crypto.component.scss']
 })
 export class CryptoComponent {
-  onRowClicked(row: Crypto) {
-     console.log("Row clicked:");
-    }
+
   cryptos: Crypto[] = [];
 
   constructor(private cryptoService: CryptoService) { }
@@ -25,4 +23,9 @@ export class CryptoComponent {
       }
     );
   }
+
+  onRowClicked(row: Crypto) {
+    console.log(row.id);
+  }
+
 }
