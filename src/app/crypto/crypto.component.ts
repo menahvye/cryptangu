@@ -8,8 +8,7 @@ import { Crypto } from '../modeles/crypto';
 })
 export class CryptoComponent {
   onRowClicked(row: Crypto) {
-     console.log("Row clicked:", row);
-      // Faites quelque chose avec l'objet Crypto cliqué ici...
+     console.log("Row clicked:");
     }
   cryptos: Crypto[] = [];
 
