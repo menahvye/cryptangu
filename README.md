@@ -4,5 +4,6 @@ Consommation d'une API avec Angular.
 
 ## Utilisation
 
-Effectuez `ng serve` à /cryptangu dans un terminal.  
+Ouvrez votre terminal dans /cryptangu.  
+Effectuez `npm install`, puis `ng start` pour démarrer le projet.  
 Naviguez au `http://localhost:4200/` si l'application ne se lance pas automatiquement.
