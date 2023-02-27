@@ -6,22 +6,28 @@ import { AppComponent } from './app.component';
 import { CryptoComponent } from './crypto/crypto.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 // MATERIAL
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import {MatTableModule} from '@angular/material/table';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { PageIntrouvableComponent } from './page-introuvable/page-introuvable.component';
+import { PageAccueilComponent } from './page-accueil/page-accueil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CryptoComponent
+    CryptoComponent,
+    PageIntrouvableComponent,
+    PageAccueilComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
