@@ -13,13 +13,15 @@ import { Router } from '@angular/router';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PageIntrouvableComponent } from './page-introuvable/page-introuvable.component';
 import { PageAccueilComponent } from './page-accueil/page-accueil.component';
+import { SelectcryptoComponent } from './selectcrypto/selectcrypto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CryptoComponent,
     PageIntrouvableComponent,
-    PageAccueilComponent
+    PageAccueilComponent,
+    SelectcryptoComponent
   ],
   imports: [
     BrowserModule,

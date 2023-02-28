@@ -20,4 +20,6 @@ import { Crypto } from '../modeles/crypto';
         };
         return this.http.get<Crypto[]>(url, headers);
       }
+
+     
   }

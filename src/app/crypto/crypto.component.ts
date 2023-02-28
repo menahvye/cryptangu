@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
   templateUrl: './crypto.component.html',
   styleUrls: ['./crypto.component.scss']
 })
-
 export class CryptoComponent {
 
   cryptos: Crypto[] = [];
+  selectedCrypto: Crypto | undefined;
 
   constructor(
     private router: Router,
@@ -31,6 +31,6 @@ export class CryptoComponent {
   }
 
   onRowClicked(crypto: Crypto) {
-    this.router.navigate(['/liste', crypto.id]);
+    this.selectedCrypto = crypto;
   }
 }

@@ -1,0 +1,29 @@
+.ac{
+    width:80%;
+    margin:20px auto;
+    text-align: center;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+section {
+	flex: 2;
+	margin-right: 20px;
+}
+
+aside {
+	flex: 1;
+}
+
+p {
+	margin: 0;
+	line-height: 1.5;
+}
