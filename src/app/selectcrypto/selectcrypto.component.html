@@ -1,0 +1,50 @@
+<div class="crypto-details" *ngIf="selectedCrypto">
+  <h2>{{ selectedCrypto.name }} - ({{ selectedCrypto.symbol}})</h2>
+  <h3>Rang : {{ selectedCrypto.cmc_rank }}</h3>
+  <p>
+    Le {{ selectedCrypto.name }} a été introduit le {{ selectedCrypto.date_added }}. <br/>
+    La circulation actuelle est de {{ selectedCrypto.circulating_supply}}({{selectedCrypto.symbol}})
+  </p>
+  <p></p>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Prix</th>
+        <th>1 heure</th>
+        <th>24 heures</th>
+        <th>7 jours</th>
+        <th>1 mois</th>
+        <th>3 mois</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>${{ selectedCrypto.quote.USD.price }}</td>
+        <td [style.color]="selectedCrypto.quote.USD.percent_change_1h >= 0 ? 'green' : 'red'">
+          {{ selectedCrypto.quote.USD.percent_change_1h }}%
+        </td>
+        <td [style.color]="selectedCrypto.quote.USD.percent_change_24h >= 0 ? 'green' : 'red'">
+          {{ selectedCrypto.quote.USD.percent_change_24h }}%
+        </td>
+        <td [style.color]="selectedCrypto.quote.USD.percent_change_7d >= 0 ? 'green' : 'red'">
+          {{ selectedCrypto.quote.USD.percent_change_7d }}%
+        </td>
+        <td [style.color]="selectedCrypto.quote.USD.percent_change_30d >= 0 ? 'green' : 'red'">
+          {{ selectedCrypto.quote.USD.percent_change_30d }}%
+        </td>
+        <td [style.color]="selectedCrypto.quote.USD.percent_change_90d >= 0 ? 'green' : 'red'">
+          {{ selectedCrypto.quote.USD.percent_change_90d }}%
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+
+<div class="ns" *ngIf="!selectedCrypto">
+  <h1>Une erreur est survenue.</h1>
+  <h3><a href="liste">Selectionner une nouvelle Crypto</a></h3>
+</div>

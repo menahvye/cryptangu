@@ -1,0 +1,40 @@
+.crypto-details {
+    width: 50%;
+    margin:20px auto;
+  }
+  
+//   .crypto-details h2 {
+//     margin-top: 0;
+//   }
+  
+//   .crypto-details p {
+//     margin-bottom: 10px;
+//   }
+  
+  .crypto-details table {
+    margin:20px auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .crypto-details th, .crypto-details td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .crypto-details th {
+    background-color: #ddd;
+  }
+  
+  .crypto-details tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  a{
+    text-decoration: none;
+    color: blue;
+  }
+
+  .ns{
+    text-align: center;
+  }

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { CryptoService } from '../services/crypto.service';
 import { Crypto } from '../modeles/crypto';
 import { Router } from '@angular/router';
+import { SharedService } from '../services/shared.service';
+import { SelectcryptoComponent } from '../selectcrypto/selectcrypto.component';
 
 @Component({
   selector: 'app-crypto',
@@ -11,11 +13,11 @@ import { Router } from '@angular/router';
 export class CryptoComponent {
 
   cryptos: Crypto[] = [];
-  selectedCrypto: Crypto | undefined;
 
   constructor(
     private router: Router,
-    private cryptoService: CryptoService
+    private cryptoService: CryptoService,
+    private sharedService: SharedService
   ) {}
 
   ngOnInit() {
@@ -31,6 +33,12 @@ export class CryptoComponent {
   }
 
   onRowClicked(crypto: Crypto) {
-    this.selectedCrypto = crypto;
+
+    const id = crypto.id;
+    const selectcrypto = this.cryptos.find((crypto) => crypto.id === id);
+    //console.log(selectcrypto);
+
+    this.sharedService.setSelectedCrypto(crypto);
+    this.router.navigate(['/liste', crypto.id]);
   }
 }

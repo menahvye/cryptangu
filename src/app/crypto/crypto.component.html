@@ -2,18 +2,14 @@
   <table class="table">
     <thead>
       <tr>
-        <th>ID</th>
         <th>Nom</th>
         <th>Symbole</th>
-        <th class="la">Prix</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let crypto of cryptos" (click)="onRowClicked(crypto)">
-        <td>{{crypto.id}}</td>
         <td>{{crypto.name}}</td>
         <td>{{crypto.symbol}}</td>
-        <td class="price" *ngIf="selectedCrypto === crypto">{{crypto.quote.USD.price}}</td>
       </tr>
     </tbody>
   </table>
