@@ -15,3 +15,10 @@ En cliquant dessus, des détails sur celle-ci apparaîtront, en vous laissant le
 - Ouvrez votre terminal dans /cryptangu.  
 - Effectuez `npm install`, puis `ng start` pour démarrer le projet.  
 - Naviguez au `http://localhost:4200/` si l'application ne se lance pas automatiquement.
+
+## Erreur
+
+Si l'erreur ```ng : Impossible de charger le fichier C:\...\npm\ng.ps1``` apparait
+
+- Ouvrez Windows PowerShell en tant qu'administrateur
+- Effectuez le commande ```set-executionpolicy unrestricted```, suivit de O pour confirmer
